@@ -1,6 +1,6 @@
 'use strict';
 
-var workingHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'] ; 
+var workingHours = ['6am: ', '7am: ', '8am: ', '9am: ', '10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: ', '6pm: ', '7pm: ', '8pm: '] ; 
 
 var Seattle = {
     name : 'Seattle',
@@ -86,11 +86,14 @@ var Seattle = {
 
 function generateRandCookiesNum(minCust,maxCust,avgCookie){
     var randomCookiesNumArray = [];
+    var totalSum = 0
     for (var i = 0; i < workingHours.length; i++){
     var randomvalue = Math.random();
     var randCustNum = Math.floor(randomvalue * ( maxCust-minCust +1) + minCust);
     var randomCookiesNum = Math.floor(randCustNum * avgCookie);
-    randomCookiesNumArray.push(randomCookiesNum);
+    totalSum = totalSum + randomCookiesNum;  
+    randomCookiesNumArray.push (workingHours[i] + randomCookiesNum.toString());
     }
+    randomCookiesNumArray.push ('Total: ' + totalSum.toString());
     return randomCookiesNumArray;
 }
