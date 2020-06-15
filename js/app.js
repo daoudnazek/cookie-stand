@@ -8,7 +8,7 @@ var Seattle = {
     minimumCustomers : 23,
     maxCustomers : 65,
     avgCookiesPerCust : 6.2,
-    cookiesPerHour : 0,
+    cookiesPerHour : [],
     avgCookiesPerHour : function(minCust,maxCust,avgCookie) {
         this.cookiesPerHour = generateRandCookiesNum(minCust,maxCust,avgCookie);
     }
@@ -18,15 +18,79 @@ var Seattle = {
  console.log(Seattle);
 
 
+ var Tokyo = {
+    name : 'Tokyo',
+    hoursOfOperation : workingHours, 
+    minimumCustomers : 3,
+    maxCustomers : 24,
+    avgCookiesPerCust : 1.2,
+    cookiesPerHour : [],
+    avgCookiesPerHour : function(minCust,maxCust,avgCookie) {
+        this.cookiesPerHour = generateRandCookiesNum(minCust,maxCust,avgCookie);
+    }
+};
+
+ Tokyo.avgCookiesPerHour(3,24,1.2);
+ console.log(Tokyo);
+
+
+ var Dubai = {
+    name : 'Dubai',
+    hoursOfOperation : workingHours, 
+    minimumCustomers : 11,
+    maxCustomers : 38,
+    avgCookiesPerCust : 3.7,
+    cookiesPerHour : [],
+    avgCookiesPerHour : function(minCust,maxCust,avgCookie) {
+        this.cookiesPerHour = generateRandCookiesNum(minCust,maxCust,avgCookie);
+    }
+};
+
+ Dubai.avgCookiesPerHour(11,38,3.7);
+ console.log(Dubai);
+
+
+ var Paris = {
+    name : 'Paris',
+    hoursOfOperation : workingHours, 
+    minimumCustomers : 20,
+    maxCustomers : 38,
+    avgCookiesPerCust : 2.3,
+    cookiesPerHour : [],
+    avgCookiesPerHour : function(minCust,maxCust,avgCookie) {
+        this.cookiesPerHour = generateRandCookiesNum(minCust,maxCust,avgCookie);
+    }
+};
+
+ Paris.avgCookiesPerHour(20,38,2.3);
+ console.log(Paris);
+
+
+ var Lima = {
+    name : 'Lima',
+    hoursOfOperation : workingHours, 
+    minimumCustomers : 2,
+    maxCustomers : 16,
+    avgCookiesPerCust : 4.6,
+    cookiesPerHour : [],
+    avgCookiesPerHour : function(minCust,maxCust,avgCookie) {
+        this.cookiesPerHour = generateRandCookiesNum(minCust,maxCust,avgCookie);
+    }
+};
+
+ Lima.avgCookiesPerHour(2,16,4.6);
+ console.log(Lima);
+
+
+
+
 function generateRandCookiesNum(minCust,maxCust,avgCookie){
-    for (var i = 0; i < 11; i++){
+    var randomCookiesNumArray = [];
+    for (var i = 0; i < workingHours.length; i++){
     var randomvalue = Math.random();
     var randCustNum = Math.floor(randomvalue * ( maxCust-minCust +1) + minCust);
     var randomCookiesNum = Math.floor(randCustNum * avgCookie);
-    return [randCustNum,randCustNum];
-
+    randomCookiesNumArray.push(randomCookiesNum);
     }
-    
+    return randomCookiesNumArray;
 }
-
-console.log(generateRandCookiesNum(23,65,6.2));
