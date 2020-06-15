@@ -205,5 +205,3 @@ function generateRandCookiesNum(minCust, maxCust, avgCookie) {
     return randomCookiesNumArray;
 }
 
-
-console.log(Seattle);
