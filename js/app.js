@@ -9,8 +9,8 @@ var Seattle = {
     maxCustomers: 65,
     avgCookiesPerCust: 6.2,
     cookiesPerHour: [],
-    avgCookiesPerHour: function (minCust, maxCust, avgCookie) {
-        this.cookiesPerHour = generateRandCookiesNum(minCust, maxCust, avgCookie);
+    avgCookiesPerHour: function () {
+        this.cookiesPerHour = generateRandCookiesNum(this.minimumCustomers, this.maxCustomers, this.avgCookiesPerCust);
     },
 
     render: function() {
@@ -36,7 +36,7 @@ var Seattle = {
     },
 };
 
-Seattle.avgCookiesPerHour(23, 65, 6.2);
+Seattle.avgCookiesPerHour();
 Seattle.render();
 
 
@@ -47,8 +47,8 @@ var Tokyo = {
     maxCustomers: 24,
     avgCookiesPerCust: 1.2,
     cookiesPerHour: [],
-    avgCookiesPerHour: function (minCust, maxCust, avgCookie) {
-        this.cookiesPerHour = generateRandCookiesNum(minCust, maxCust, avgCookie);
+    avgCookiesPerHour: function () {
+        this.cookiesPerHour = generateRandCookiesNum(this.minimumCustomers, this.maxCustomers, this.avgCookiesPerCust);
     },
 
     render: function() {
@@ -74,7 +74,7 @@ var Tokyo = {
     },
 };
 
-Tokyo.avgCookiesPerHour(3, 24, 1.2);
+Tokyo.avgCookiesPerHour();
 Tokyo.render();
 
 
@@ -85,9 +85,8 @@ var Dubai = {
     maxCustomers: 38,
     avgCookiesPerCust: 3.7,
     cookiesPerHour: [],
-    avgCookiesPerHour: function (minCust, maxCust, avgCookie) {
-        this.cookiesPerHour = generateRandCookiesNum(minCust, maxCust, avgCookie);
-    },
+    avgCookiesPerHour: function () {
+        this.cookiesPerHour = generateRandCookiesNum(this.minimumCustomers, this.maxCustomers, this.avgCookiesPerCust);    },
 
     render: function() {
 
@@ -112,7 +111,7 @@ var Dubai = {
     },
 };
 
-Dubai.avgCookiesPerHour(11, 38, 3.7);
+Dubai.avgCookiesPerHour();
 Dubai.render();
 
 
@@ -124,9 +123,8 @@ var Paris = {
     maxCustomers: 38,
     avgCookiesPerCust: 2.3,
     cookiesPerHour: [],
-    avgCookiesPerHour: function (minCust, maxCust, avgCookie) {
-        this.cookiesPerHour = generateRandCookiesNum(minCust, maxCust, avgCookie);
-    },
+    avgCookiesPerHour: function () {
+        this.cookiesPerHour = generateRandCookiesNum(this.minimumCustomers, this.maxCustomers, this.avgCookiesPerCust);    },
 
     render: function() {
 
@@ -151,7 +149,7 @@ var Paris = {
     },
 };
 
-Paris.avgCookiesPerHour(20, 38, 2.3);
+Paris.avgCookiesPerHour();
 Paris.render();
 
 
@@ -162,9 +160,8 @@ var Lima = {
     maxCustomers: 16,
     avgCookiesPerCust: 4.6,
     cookiesPerHour: [],
-    avgCookiesPerHour: function (minCust, maxCust, avgCookie) {
-        this.cookiesPerHour = generateRandCookiesNum(minCust, maxCust, avgCookie);
-    },
+    avgCookiesPerHour: function () {
+        this.cookiesPerHour = generateRandCookiesNum(this.minimumCustomers, this.maxCustomers, this.avgCookiesPerCust);    },
 
     render: function() {
 
@@ -189,7 +186,7 @@ var Lima = {
     },
 };
 
-Lima.avgCookiesPerHour(2, 16, 4.6);
+Lima.avgCookiesPerHour();
 Lima.render();
 
 
