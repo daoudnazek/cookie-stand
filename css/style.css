@@ -1,0 +1,13 @@
+tr{
+    width: 10px;
+    height: 5px;
+}
+
+th{
+    width: fit-content;
+    height: fit-content;
+}
+
+table{
+    border: aqua;
+}
