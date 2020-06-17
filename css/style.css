@@ -1,13 +1,39 @@
-tr{
-    width: 10px;
-    height: 5px;
+header{
+    width: 100%;
+    background-color: white;
+    top: 0em;
+    padding: 0px;
 }
 
-th{
-    width: fit-content;
-    height: fit-content;
+header h1{
+    text-align: center;
+    color: #7BF80A;
+    margin: 0px;
+    font-size: 50px;
+    position: fixed;
+    width: 100%;
 }
 
-table{
-    border: aqua;
+#all-locations div{
+    display: inline-block
+
+
+div {
+    display: inline;
+    background-color: #02F7AA;
+    width: 200px;
+    height: 500px;
+}
+main div img {
+    width: 100%;
+}
+
+nav{
+    background-color:#7BF80A ;
+    margin-top: 100px;
+}
+
+header a {
+    background-color: #0AC4FC ;
+    width: 100%;
 }
