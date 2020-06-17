@@ -10,7 +10,6 @@ header h1{
     color: #7BF80A;
     margin: 0px;
     font-size: 50px;
-    position: fixed;
     width: 100%;
 }
 
@@ -19,14 +18,11 @@ header h1{
 
 
 div {
-    display: inline;
     background-color: #02F7AA;
     width: 200px;
     height: 500px;
 }
-main div img {
-    width: 100%;
-}
+
 
 nav{
     background-color:#7BF80A ;
@@ -35,5 +31,9 @@ nav{
 
 header a {
     background-color: #0AC4FC ;
+    width: 100%;
+}
+
+main img {
     width: 100%;
 }
