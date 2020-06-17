@@ -5,7 +5,7 @@ header{
     padding: 0px;
 }
 
-header h1{
+ h1{
     text-align: center;
     color: #7BF80A;
     margin: 0px;
@@ -13,27 +13,51 @@ header h1{
     width: 100%;
 }
 
-#all-locations div{
-    display: inline-block
-
 
 div {
-    background-color: #02F7AA;
+    
     width: 200px;
-    height: 500px;
+    height: 120px;
+    display: inline-block;
+    margin: 5px;
 }
+
+p{
+    
+}
+
 
 
 nav{
     background-color:#7BF80A ;
-    margin-top: 100px;
+    height: 40px;
+    box-shadow: white;
 }
 
-header a {
+ul{
+    height: 40px;
+    text-align: center;
+    margin: 5px;
+}
+
+li{
+    display: inline;
+    text-align: center;
+
+}
+
+a {
     background-color: #0AC4FC ;
     width: 100%;
+text-decoration: thistle;
 }
 
 main img {
     width: 100%;
+}
+
+
+table{
+    border: black solid 2px;
+    
 }
