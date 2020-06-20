@@ -91,7 +91,6 @@ function tableFooter() {
 tableFooter();
 
 
-
 function generateRandCookiesNum(minCust, maxCust, avgCookie) {
     var randomCookiesNumArray = [];
     var totalSum = 0
