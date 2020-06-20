@@ -58,30 +58,16 @@ var Dubai = new City('Dubai', 11, 38, 3.7);
 var Paris = new City('Paris', 20, 38, 2.3);
 var Lima = new City('Lima', 2, 16, 4.6);
 
-var numberOfCities = citiesArr.length;
-console.log(numberOfCities);
-
 
 for (var i = 0; i < citiesArr.length; i++) {
     citiesArr[i].avgCookiesPerHour();
     citiesArr[i].render();
 };
 
+
 var cityForm = document.getElementById('cityData');
 cityForm.addEventListener('submit', newCityData);
 
-function newCityData (event){
-    event.preventDefault();
-    var cityNameValue = event.target.cityName.value;
-    var maxCustValue = event.target.maxCust.value;
-    var minCustValue = event.target.minCust.value;
-    var avgCustCookiesValue = event.target.avgCustCookies.value;
-    var newCity = new City(cityNameValue,+minCustValue,+maxCustValue,+avgCustCookiesValue);
-    newCity.avgCookiesPerHour();
-    newCity.render();
-    tableFooter();
-    
-}
 
 
 
@@ -100,9 +86,9 @@ function tableFooter() {
         td.textContent = hourTotal;
         tr.appendChild(td);
     }
+    tr.setAttribute('id', 'footerRow')
 }
-
-
+tableFooter();
 
 
 
@@ -120,6 +106,22 @@ function generateRandCookiesNum(minCust, maxCust, avgCookie) {
     return randomCookiesNumArray;
 
 };
+
+function newCityData (event){
+    event.preventDefault();
+    var cityNameValue = event.target.cityName.value;
+    var maxCustValue = event.target.maxCust.value;
+    var minCustValue = event.target.minCust.value;
+    var avgCustCookiesValue = event.target.avgCustCookies.value;
+    var newCity = new City(cityNameValue,+minCustValue,+maxCustValue,+avgCustCookiesValue);
+    newCity.avgCookiesPerHour();
+    table.removeChild(document.getElementById('footerRow'));
+    newCity.render();
+    tableFooter();
+    
+}
+
+
 
 
 
